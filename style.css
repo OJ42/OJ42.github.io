@@ -16,42 +16,66 @@ body {
 		background-position: 0% 50%;
 	}
 }
-:root {
-    --shadow-color: #FF9E9E;
-    --shadow-color-light: white;
+  
+.text {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    transform: translateY(-50%);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
   }
-  
-  
-  p {
-    margin:  auto 0 auto;
-    font-size: 35px;
-    text-transform: uppercase;
-    font-family: "Archivo Black", "Archivo", sans-serif;
-    font-weight: normal;
+  .text:hover {
+    transform: rotateX(35deg), translateY(-50%);
+  }
+  .text:hover span {
+    color: #ccc;
+  }
+  .text:hover span:nth-child(odd) {
+    transform: skewY(15deg);
+  }
+  .text:hover span:nth-child(even) {
+    transform: skewY(-15deg);
+    background-color: #f9f9f9;
+    color: #a6a6a6;
+  }
+  .text > span {
     display: block;
-    height: auto;
-    text-align: left;
+    background-color: #fff;
+    width: 50px;
+    height: 120px;
+    line-height: 120px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
+  }
+  .text > span:first-child {
+    border-radius: 1px 0 0 5px;
+  }
+
+  .topnav {
+    background-color: transparent;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
   }
   
-  .logo-1 {
-    color: white;
-    animation: neon 3s infinite;
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 22px;
   }
   
-  @keyframes neon {
-    0% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
-    50% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
-    }
-    100% {
-      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-    }
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  h2 {
+    color: #f2f2f2;
+    font-size: 20px;
   }
