@@ -20,6 +20,32 @@ h2 {
   
 }
 
+.linkedin {
+    background: transparent;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 15px;
+  }
+  .github {
+      background: transparent;
+      height: 100px;
+      width: 100px;
+      float: left;
+      margin: 15px;
+    }
+  
+  .form {
+      float: left;
+  }
+  h3 {
+    color: #f2f2f2;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px;
+    
+  }
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -198,28 +224,3 @@ img {
     to {opacity: 1}
   }
 
-.linkedin {
-  background: transparent;
-  height: 100px;
-  width: 100px;
-  float: left;
-  margin: 15px;
-}
-.github {
-    background: transparent;
-    height: 100px;
-    width: 100px;
-    float: left;
-    margin: 15px;
-  }
-
-.form {
-    float: left;
-}
-h3 {
-  color: #f2f2f2;
-  font-size: 22px;
-  font-weight: 400;
-  margin: 20px;
-  
-}
