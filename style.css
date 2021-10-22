@@ -5,6 +5,19 @@ body {
 	height: 100vh;
 }
 
+p{
+    color: white;
+    font-size: 20px;
+    margin: 10px
+}
+
+h2 {
+  color: #f2f2f2;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 10px;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -74,24 +87,7 @@ body {
     background-color: #ddd;
     color: black;
   }
-  #domov{
-    width: 100%;
-    display: flex;
-    /* position: sticky; */
-}
 
-  p{
-      color: white;
-      font-size: 20px;
-      margin: 10px
-  }
-
-  h2 {
-    color: #f2f2f2;
-    font-size: 22px;
-    font-weight: 400;
-    margin: 10px;
-  }
 
   * {box-sizing:border-box}
   @keyframes fade {
@@ -102,9 +98,5 @@ body {
     100% {
       opacity: 1;
     }
-  }
-  
-  body h1 {
-    text-align: center;
   }
   
