@@ -7,7 +7,8 @@ body {
 p {
     color: white;
     font-size: 20px;
-    margin: 20px
+    margin: 20px;
+    overflow: hidden;
 }
 
 h2 {
@@ -15,17 +16,30 @@ h2 {
   font-size: 22px;
   font-weight: 400;
   margin: 10px;
-  border-bottom: 2px solid rgb(136, 136, 136);
-  
+  border-bottom: 2px solid rgb(136, 136, 136);  
 }
 h3 {
     color: #f2f2f2;
     font-size: 22px;
     font-weight: 400;
-    margin: 20px;
-    
+    margin: 20px;    
   }
-
+  .column {
+    float: left;
+  }
+  
+  .left {
+    width: 25%;
+  }
+  
+  .right {
+    width: 75%;
+  } 
+.profile {
+    height: 300px;
+    width:300px;
+    float: right;
+}
 .linkedin {
     background: transparent;
     height: 100px;
@@ -33,19 +47,13 @@ h3 {
     float: left;
     margin: 15px;
   }
-  .github {
-      background: transparent;
-      height: 100px;
-      width: 100px;
-      float: left;
-      margin: 15px;
-    }
-  
-  .form {
-      float: left;
-  }
-
-
+.github {
+    background: transparent;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 15px;
+}  
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -56,8 +64,7 @@ h3 {
 	100% {
 		background-position: 0% 50%;
 	}
-}
-  
+}  
 .text {
     display: flex;
     justify-content: center;
@@ -66,82 +73,68 @@ h3 {
     text-align: center;
     transition: transform 0.3s ease-in-out;
   }
-  .text:hover {
-    transform: rotateX(35deg), translateY(-50%);
-  }
-  .text:hover span {
-    color: #ccc;
-  }
-  .text:hover span:nth-child(odd) {
-    transform: skewY(15deg);
-  }
-  .text:hover span:nth-child(even) {
-    transform: skewY(-15deg);
-    background-color: #f9f9f9;
-    color: #a6a6a6;
-  }
-  .text > span {
-    display: block;
-    background-color: #fff;
-    width: 50px;
-    height: 120px;
-    line-height: 120px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
-  }
-  .text > span:first-child {
-    border-radius: 1px 0 0 5px;
-  }
-
-  .topnav {
-    background-color: transparent;
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-
-  .topnav a {
-    float: center;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-size: 22px;
-  }
-  
- 
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-
-  * {box-sizing:border-box}
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-
+.text:hover {
+transform: rotateX(35deg), translateY(-50%);
+}
+.text:hover span {
+color: #ccc;
+}
+.text:hover span:nth-child(odd) {
+transform: skewY(15deg);
+}
+.text:hover span:nth-child(even) {
+transform: skewY(-15deg);
+background-color: #f9f9f9;
+color: #a6a6a6;
+}
+.text > span {
+display: block;
+background-color: #fff;
+width: 50px;
+height: 120px;
+line-height: 120px;
+transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
+}
+.text > span:first-child {
+border-radius: 1px 0 0 5px;
+}
+.topnav {
+background-color: transparent;
+overflow: hidden;
+margin: 0 auto;
+text-align: center;
+}  
+.topnav a {
+float: center;
+color: #f2f2f2;
+text-align: center;
+padding: 5px 5px;
+text-decoration: none;
+font-size: 22px;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+* {box-sizing:border-box}
+@keyframes fade {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
 .img-hover-zoom {
     overflow: hidden; 
-  }
-  
-
-  .img-hover-zoom img {
-    transition: transform .5s ease;
-  }
-  
-
-  .img-hover-zoom:hover img {
-    transform: scale(1.15);
-  }
-  
+  }  
+.img-hover-zoom img {
+transition: transform .5s ease;
+}  
+.img-hover-zoom:hover img {
+transform: scale(1.15);
+}  
 .skills {
     overflow: hidden;
 }
@@ -160,65 +153,63 @@ img {
     width:  100%;
     height: 100%;
 }
-
-
- .slideshow-container {
+.slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
     overflow: hidden;
-  }
-  .mySlides {
-    display: none;
-    overflow: hidden;
-  }
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+}
+.mySlides {
+display: none;
+overflow: hidden;
+}
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+background-color: #717171;
+}
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
   
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  } 
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+} 
 
