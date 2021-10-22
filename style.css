@@ -4,7 +4,6 @@ body {
 	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
-
 p {
     color: white;
     font-size: 20px;
@@ -19,6 +18,13 @@ h2 {
   border-bottom: 2px solid rgb(136, 136, 136);
   
 }
+h3 {
+    color: #f2f2f2;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px;
+    
+  }
 
 .linkedin {
     background: transparent;
@@ -38,13 +44,7 @@ h2 {
   .form {
       float: left;
   }
-  h3 {
-    color: #f2f2f2;
-    font-size: 22px;
-    font-weight: 400;
-    margin: 20px;
-    
-  }
+
 
 @keyframes gradient {
 	0% {
@@ -127,10 +127,7 @@ h2 {
       opacity: 1;
     }
   }
-  html,
-body {
-  margin: auto;
-}
+
 .img-hover-zoom {
     overflow: hidden; /* [1.2] Hide the overflowing of child elements */
   }
