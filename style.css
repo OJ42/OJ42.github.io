@@ -170,6 +170,7 @@ img {
   }
   .mySlides {
     display: none;
+    overflow: hidden;
   }
   .prev, .next {
     cursor: pointer;
